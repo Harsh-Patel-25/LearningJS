@@ -7,7 +7,13 @@
 </head>
 <body>
     <script>
-        
+        console.log("This is setTimeout function's example.");
+        setTimeout(function(){
+            console.log("Koenigsegg is a Swedish car brand.");
+        },2000); // Anonymous function
+        setTimeout(() => {
+            console.log("BMW is a German car brand.");
+        },4000); // Arrow function
     </script>
 </body>
 </html>

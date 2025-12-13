@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval()</title>
+</head>
+<body>
+    <script>
+        let id = setInterval(function(){
+            console.log("BMW");
+        },2000);//anonymous function
+
+        // setInterval fun repeate this func after every 2 seconds.
+
+        let id2 = setInterval(() => {
+            console.log("Pagani");
+        },3000);//arrow function
+
+        // To stop this we use
+        //clearInterval(id); // to stop first setInterval
+        //clearInterval(id2); // to stop second setInterval
+    </script>
+</body>
+</html>

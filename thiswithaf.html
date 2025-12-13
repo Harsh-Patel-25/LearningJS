@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This function with arrow function.</title>
+</head>
+<body>
+    <script>
+        // Arrow function use dexical scope that means who calls the parrent of arrow function.
+        const student = {
+            name: "Harsh",
+            age: 21,
+            marks : 95,
+            getname: function(){
+                console.log(this.name); // global scope
+            },
+            getage: () => {
+                console.log(this.age); // parent scope here parent is getage so getage's this is our this in this case. so getage's this is window object in window object age is not defined.
+                console.log(this); // window object 
+                console.log(window.age); // undefined
+            }      
+        }
+
+        // Note :- Arrow function doesn't have its own this keyword. 
+        // we can not use this in arrow function to refer to the object itself.
+        // but we can use this as window's any variable.
+        //Example :-
+
+        const useofthis = {
+            getinfo1:function(){
+                setTimeout(function() {
+                    console.log(this); // window object
+                },1000);
+            },
+            getinfo2:function(){
+                setTimeout(() => {
+                    console.log(this); // useofthis object
+                },1000);
+            }
+        }
+    </script>
+</body>
+</html>
