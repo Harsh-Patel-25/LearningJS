@@ -1,5 +1,5 @@
 # Purpose :-
-For learning js.
+All topics are covered here.
 
 # Editor
 Harsh Patel.
