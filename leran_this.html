@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword.</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            name: "John",
+            age: 21,
+            phy: 70,
+            math: 75,
+            chem: 65,
+            avg(){
+                // return (phy+math+chem)/3; // without this keyword it will give error
+                return (this.phy + this.math + this.chem)/3;
+            }
+        }
+        console.log(student.avg());
+    </script>
+</body>
+
+</html>
