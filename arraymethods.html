@@ -31,31 +31,31 @@
         // });
         let num = [1,2,3,4,5];
 
-        //map
+        //2. map
         let double = num.map((el)=>{
             return el**2;
         });
         console.log(double);
 
-        //filter
+        //3. filter
         let check = num.filter((el)=>(el%2===0));
         console.log(check);
 
-        //every
+        //4. every
         //every method checks if all elements satisfy the condition if yes than return true else false
         let ch = num.every((el)=>{
             return el<10;
         })
         console.log(ch);
 
-        //some
+        //5. some
         //some method checks if at least one element satisfy the condition if yes than return true else false
         let cs = num.some((el)=>{
             return el>4;
         });
         console.log(cs);
 
-        //reduce
+        //6. reduce
         let acc = [1,2,3,4,5,10];
         let final = acc.reduce((a,el)=>{
             return a+el;

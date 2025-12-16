@@ -8,6 +8,9 @@
 <body>
     <script>
         // rest is opposite of the spread operator
+        function sum(...args) {
+            return args.reduce((sum,el)=>sum+el,0);
+        }
     </script>
 </body>
 </html>
