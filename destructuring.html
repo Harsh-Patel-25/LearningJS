@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring in js</title>
+</head>
+<body>
+    <script>
+        let nm = ["harsh","ridhdhi","ankit","rahul","soni"];
+        let win = nm[0];
+        let runup = nm[1];
+        let third = nm[2];
+        let fourth = nm[3];
+        console.log(win,runup,third,fourth); // from this we can use destructuring
+
+        // For array destructuring we use []
+
+        //storing values from arrays or objects into multiple variables
+        let name = ["harsh","ridhdhi","ankit","rahul","soni"];
+        let [winner,runnerup,...others]= name;
+        console.log(winner,runnerup);
+
+        //object destructuring
+
+        //for object destructuring we use {}
+        const student = {
+            name:"John",
+            age:21,
+            course:"Btech",
+            username:"john51",
+            pass:51,
+            marks:[90,85,88,96]
+        };
+        let {username,pass}=student; // in this the parameters are same as the object key names
+        let {name : studentname  , age: ageofstu , city = "undel"} = student;
+           //key  : new_var_name    
+
+    </script>
+</body>
+</html>
