@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle in Dark and Light Mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 20px;
+            font-weight: bold;
+        }
+        .btnparent {
+            display: flex;
+            justify-content: flex-end;
+        }
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btnparent" onclick="toggle()">
+        <button class="btn">Dark Mode</button>
+    </div>
+    <script>
+        const bttn = document.querySelector(".btn");
+        function toggle(){
+            document.body.classList.toggle("dark");
+            if(document.body.classList.contains("dark")){
+                bttn.textContent = "Light Mode";
+            } else {
+                bttn.textContent = "Dark Mode";
+            }
+        }
+    </script>
+</body>
+</html>
