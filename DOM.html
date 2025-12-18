@@ -116,22 +116,30 @@
         <img src="asset3.jpeg" alt="book" class="oldImg" />
     </div>
     <script>
-        // getElementBy...
+        //1. getElementBy...
         document.getElementById("head").style.color = "blue";
         document.getElementsByClassName("box")[0].style.backgroundColor = "blue";
         document.getElementsByTagName("a")[0].style.color = "green";
 
-        //query selectors
+
+        //2.query selectors
         console.dir(document.querySelector("#description"));
         console.dir(document.querySelector(".boxLink"));
         console.dir(document.querySelectorAll(".oldImg"));
 
+
         //Manipulating Attributes
+        //3. getAttribute
         let img = document.querySelector("#mainImg");
         img.getAttribute("id"); // "mainImg"
+
+
+        //4. setattribute
         img.setAttribute("src", "asset3.jpeg"); // changes image source to asset3.jpeg
 
-        //Manupulating style 
+
+        //Manupulating style
+        //5. .style.property = value 
         img.style.border = "5px solid red";
         let head = document.querySelector("#head");
         head.style.color = "lightBlue";
@@ -148,25 +156,30 @@
         //forEach method
         li.forEach((item)=>{
             item.style.color = "green";
-        });
-
-        //This style property changes and show only inline styles
+        }); //This style property changes and show only inline styles
 
 
-        //Class List
+        //6. Class List
         img.classList; // gives all the classes of the element
         let hd = document.querySelector(".box h4");
-        hd.classList.add("maroon"); // adds maroon class to the h4 element of class box
-        // hd.classList.remove("maroon"); // removes maroon class from the h4 element of class box
 
+        //6.1 classList.add()
+        hd.classList.add("maroon"); // adds maroon class to the h4 element of class box
+
+        //6.2 classList.remove()
+        hd.classList.remove("maroon"); // removes maroon class from the h4 element of class box
+
+        //6.3 classList.contains()
         // To check the presence of a class return true or false
         hd.classList.contains("maroon");
 
+        //6.4 classList.toggle()
         //toggle betweeen add or remove
         hd.classList.toggle("maroon"); // adds the class if not present else removes it
 
-
         
+        //7. Navigation Properties
+
     </script>
 </body>
 </html>
