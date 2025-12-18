@@ -58,11 +58,15 @@
             margin-right: 10px;
             border: 2px solid white;
         }
+        .maroon{
+            color: maroon;
+            text-decoration: underline black wavy;
+        }
     </style>
 </head>
 <body>
     <h1 id="head">Spider Man</h1>
-    <img src="spiderman.jpeg" id="mainImg" alt="Spider Man" />
+    <img src="spiderman.jpeg" id="mainImg" alt="Spider Man" class="mi" class="ci" />
     <h2>About</h2>
     <p>
         <b>Spider-Man</b> is a superhero appearing in American comic books
@@ -107,14 +111,62 @@
     </p>
 
     <div class="images">
-        <img src="asset1.jpeg" class="oldImg" />
-        <img src="asset2.jpeg" class="oldImg" />
-        <img src="asset3.jpeg" class="oldImg" />
+        <img src="asset1.jpeg" alt="book" class="oldImg" />
+        <img src="asset2.jpeg" alt="book" class="oldImg" />
+        <img src="asset3.jpeg" alt="book" class="oldImg" />
     </div>
     <script>
-        // getElementById
+        // getElementBy...
         document.getElementById("head").style.color = "blue";
+        document.getElementsByClassName("box")[0].style.backgroundColor = "blue";
+        document.getElementsByTagName("a")[0].style.color = "green";
+
+        //query selectors
+        console.dir(document.querySelector("#description"));
+        console.dir(document.querySelector(".boxLink"));
+        console.dir(document.querySelectorAll(".oldImg"));
+
+        //Manipulating Attributes
+        let img = document.querySelector("#mainImg");
+        img.getAttribute("id"); // "mainImg"
+        img.setAttribute("src", "asset3.jpeg"); // changes image source to asset3.jpeg
+
+        //Manupulating style 
+        img.style.border = "5px solid red";
+        let head = document.querySelector("#head");
+        head.style.color = "lightBlue";
+
+        let li = document.querySelectorAll(".box a");
+        for(let i=0;i<li.length;i++){
+            li[i].style.color = "yellow";
+        }
+        //we can also use for...of loop here
+        for(item of li){
+        //  var     iterable    
+            item.style.color = "red";
+        }
+        //forEach method
+        li.forEach((item)=>{
+            item.style.color = "green";
+        });
+
+        //This style property changes and show only inline styles
+
+
+        //Class List
+        img.classList; // gives all the classes of the element
+        let hd = document.querySelector(".box h4");
+        hd.classList.add("maroon"); // adds maroon class to the h4 element of class box
+        // hd.classList.remove("maroon"); // removes maroon class from the h4 element of class box
+
+        // To check the presence of a class return true or false
+        hd.classList.contains("maroon");
+
+        //toggle betweeen add or remove
+        hd.classList.toggle("maroon"); // adds the class if not present else removes it
+
+
+        
     </script>
 </body>
-
 </html>
