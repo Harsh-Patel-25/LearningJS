@@ -6,6 +6,29 @@
     <title>DOM Events</title>
 </head>
 <body>
-    
+    <button>Click Me!</button>
+
+    <script>
+        //onclick event
+        let button = document.querySelector("button");
+        // button.onclick = function () {
+        //     alert("Button was clicked!");
+        // }
+
+        //onmouseover event
+        button.onmouseenter = function () {
+            console.log("Mouse entered the button area.");
+        }
+
+        //Some events :- onchange, onmouseover, onmouseout, onkeydown, onkeyup, onkeypress, onload, onscroll, onblur, onfocus etc.
+
+
+        //Event listners
+        //addEventListener(event, function)
+        button.addEventListener("dblclick",()=>{
+            alert("Button clicked using Event Listener!");
+        });
+        //some events :- click, mouseover, dblclick, mouseout, keydown, keyup, keypress, load, scroll, blur, focus etc.
+    </script>
 </body>
 </html>
