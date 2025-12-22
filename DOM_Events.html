@@ -18,6 +18,22 @@
     <p>Click on me!</p>
     <div class="box"></div>
 
+    <h1>Use of "this" keyword in eventListners</h1>
+    <h3>Using this what we can do?</h3>
+    <p class="newp">This is a small paragraph.</p>
+    <button class="newbtn">click me!</button>
+
+    <input type="text" placeholder="Enter something." class="inp">
+
+    <form action="">
+        <br><br>
+        <label for="name">Name:</label>
+        <br><br>
+        <input type="text" placeholder="Enter Your full name." class="inputf">
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+
     <script>
         //onclick event
         let button = document.querySelector("button");
@@ -52,6 +68,63 @@
         })
 
         //"this" in EventListner
+
+        let newbtn = document.querySelector(".newbtn");
+        let np = document.querySelector(".newp");
+        let h1 = document.querySelector("h1");
+        let h3 = document.querySelector("h3");
+
+        // newbtn.addEventListener("click",function(){
+        //     console.dir(this.innerText);
+        //     this.style.backgroundColor = "blue";
+        // })
+
+        function changeclr(){
+            console.dir(this.innerText);
+            this.style.backgroundColor = "blue";
+        }
+        newbtn.addEventListener("click",changeclr);
+        h1.addEventListener("click",changeclr);
+        h3.addEventListener("click",changeclr);
+        np.addEventListener("click",changeclr);
+
+        //KeyBoard Events
+        let inp = document.querySelector("input");
+        inp.addEventListener("keydown",()=>console.log("Key pressed."));//for any key
+        // for specific key
+        // Every key has key and code ex. for key a ; key:"a",code:"KeyA"
+        inp.addEventListener("keypress",function(e){
+            if (e.key == " "){
+                console.log("Thank you!");
+            }
+        })
+        inp.addEventListener("keypress",(e)=>{
+            console.log(e.key);
+            console.log(e.code);
+        });
+
+
+        //Form Event & Extracting data
+        let form = document.querySelector("form");
+        let inputf = document.querySelector(".inputf");
+        
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+            // console.log(inputf.value);
+            //OR
+            console.log(form.elements[0].value);
+        })
+
+        //Change Event
+        inputf.addEventListener("change",function(){
+            console.log("Change is formed.");
+            console.log("Change is =",inputf.value);
+        })
+        inputf.addEventListener("input",function(){
+            console.log("input is formed.");
+            console.log("input is =",inputf.value);
+        })
+        
         
     </script>
 </body>
