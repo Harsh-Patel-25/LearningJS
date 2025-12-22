@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <button>Click Me!</button>
+    <!-- <button>Click Me!</button>
     <p>Click on me!</p>
     <div class="box"></div>
 
@@ -23,109 +23,120 @@
     <p class="newp">This is a small paragraph.</p>
     <button class="newbtn">click me!</button>
 
-    <input type="text" placeholder="Enter something." class="inp">
+    <input type="text" placeholder="Enter something." class="inp"> -->
 
     <form action="">
         <br><br>
-        <label for="name">Name:</label>
+        <!-- <label for="name">Name:</label>
         <br><br>
         <input type="text" placeholder="Enter Your full name." class="inputf">
         <br><br>
-        <button type="submit">Register</button>
+        <button type="submit">Register</button> -->/
+
+        <h1>My Text Editor</h1>
+        <p></p> 
+        <input type="text" name="para" id="inp" placeholder="Enter something here">
     </form>
 
     <script>
-        //onclick event
-        let button = document.querySelector("button");
-        // button.onclick = function () {
-        //     alert("Button was clicked!");
+        // //onclick event
+        // let button = document.querySelector("button");
+        // // button.onclick = function () {
+        // //     alert("Button was clicked!");
+        // // }
+
+        // //onmouseover event
+        // button.onmouseenter = function () {
+        //     console.log("Mouse entered the button area.");
         // }
 
-        //onmouseover event
-        button.onmouseenter = function () {
-            console.log("Mouse entered the button area.");
-        }
-
-        //Some events :- onchange, onmouseover, onmouseout, onkeydown, onkeyup, onkeypress, onload, onscroll, onblur, onfocus etc.
+        // //Some events :- onchange, onmouseover, onmouseout, onkeydown, onkeyup, onkeypress, onload, onscroll, onblur, onfocus etc.
 
 
-        //Event listners
-        //addEventListener(event, function)
-        button.addEventListener("dblclick",()=>{
-            alert("Button clicked using Event Listener!");
-        });
-        //some events :- click, mouseover, dblclick, mouseout, keydown, keyup, keypress, load, scroll, blur, focus etc.
+        // //Event listners
+        // //addEventListener(event, function)
+        // button.addEventListener("dblclick",()=>{
+        //     alert("Button clicked using Event Listener!");
+        // });
+        // //some events :- click, mouseover, dblclick, mouseout, keydown, keyup, keypress, load, scroll, blur, focus etc.
 
-        //Event listners at element
-        let p = document.querySelector("p");
-        p.addEventListener("click",()=>{
-            console.log("Paragraph clicked!");
-        })
-
-        let box = document.querySelector(".box");
-        box.addEventListener("mouseenter",()=>{
-            console.log("Mouse inside box!");
-        })
-
-        //"this" in EventListner
-
-        let newbtn = document.querySelector(".newbtn");
-        let np = document.querySelector(".newp");
-        let h1 = document.querySelector("h1");
-        let h3 = document.querySelector("h3");
-
-        // newbtn.addEventListener("click",function(){
-        //     console.dir(this.innerText);
-        //     this.style.backgroundColor = "blue";
+        // //Event listners at element
+        // let p = document.querySelector("p");
+        // p.addEventListener("click",()=>{
+        //     console.log("Paragraph clicked!");
         // })
 
-        function changeclr(){
-            console.dir(this.innerText);
-            this.style.backgroundColor = "blue";
-        }
-        newbtn.addEventListener("click",changeclr);
-        h1.addEventListener("click",changeclr);
-        h3.addEventListener("click",changeclr);
-        np.addEventListener("click",changeclr);
+        // let box = document.querySelector(".box");
+        // box.addEventListener("mouseenter",()=>{
+        //     console.log("Mouse inside box!");
+        // })
 
-        //KeyBoard Events
-        let inp = document.querySelector("input");
-        inp.addEventListener("keydown",()=>console.log("Key pressed."));//for any key
-        // for specific key
-        // Every key has key and code ex. for key a ; key:"a",code:"KeyA"
-        inp.addEventListener("keypress",function(e){
-            if (e.key == " "){
-                console.log("Thank you!");
-            }
-        })
-        inp.addEventListener("keypress",(e)=>{
-            console.log(e.key);
-            console.log(e.code);
-        });
+        // //"this" in EventListner
+
+        // let newbtn = document.querySelector(".newbtn");
+        // let np = document.querySelector(".newp");
+        // let h1 = document.querySelector("h1");
+        // let h3 = document.querySelector("h3");
+
+        // // newbtn.addEventListener("click",function(){
+        // //     console.dir(this.innerText);
+        // //     this.style.backgroundColor = "blue";
+        // // })
+
+        // function changeclr(){
+        //     console.dir(this.innerText);
+        //     this.style.backgroundColor = "blue";
+        // }
+        // newbtn.addEventListener("click",changeclr);
+        // h1.addEventListener("click",changeclr);
+        // h3.addEventListener("click",changeclr);
+        // np.addEventListener("click",changeclr);
+
+        // //KeyBoard Events
+        // let inp = document.querySelector("input");
+        // inp.addEventListener("keydown",()=>console.log("Key pressed."));//for any key
+        // // for specific key
+        // // Every key has key and code ex. for key a ; key:"a",code:"KeyA"
+        // inp.addEventListener("keypress",function(e){
+        //     if (e.key == " "){
+        //         console.log("Thank you!");
+        //     }
+        // })
+        // inp.addEventListener("keypress",(e)=>{
+        //     console.log(e.key);
+        //     console.log(e.code);
+        // });
 
 
-        //Form Event & Extracting data
-        let form = document.querySelector("form");
-        let inputf = document.querySelector(".inputf");
+        // //Form Event & Extracting data
+        // let form = document.querySelector("form");
+        // let inputf = document.querySelector(".inputf");
         
-        form.addEventListener("submit", function(event){
-            event.preventDefault();
-            // console.log(inputf.value);
-            //OR
-            console.log(form.elements[0].value);
+        // form.addEventListener("submit", function(event){
+        //     event.preventDefault();
+        //     // console.log(inputf.value);
+        //     //OR
+        //     console.log(form.elements[0].value);
+        // })
+
+        // //Change Event
+        // inputf.addEventListener("change",function(){
+        //     console.log("Change is formed.");
+        //     console.log("Change is =",inputf.value);
+        // })
+        // inputf.addEventListener("input",function(){
+        //     console.log("input is formed.");
+        //     console.log("input is =",inputf.value);
+        // })
+        
+        let input = document.querySelector("#inp");
+        let h1 = document.querySelector("h1");
+        let p = document.querySelector("p");
+
+        input.addEventListener("input",function(){
+            p.innerText = input.value;
         })
 
-        //Change Event
-        inputf.addEventListener("change",function(){
-            console.log("Change is formed.");
-            console.log("Change is =",inputf.value);
-        })
-        inputf.addEventListener("input",function(){
-            console.log("input is formed.");
-            console.log("input is =",inputf.value);
-        })
-        
-        
     </script>
 </body>
 </html>
