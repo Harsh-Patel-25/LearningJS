@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bublibg</title>
+    <style>
+        div{
+            background-color: blue;
+            height: 100px;
+        }
+        ul {
+            background-color: red;
+        }
+        li{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </div>
+
+    <script>
+        //to stop bubbling we use stopPropogation
+        let div = document.querySelector("div");
+        let ul = document.querySelector("ul");
+        let li = document.querySelectorAll("li");
+
+        div.addEventListener("click",function(){
+            console.log("Div was clicked.");
+        })
+        ul.addEventListener("click",function(event){
+            event.stopPropagation();
+            console.log("ul was clicked.");
+        })
+        for(list of li){
+            list.addEventListener("click",function(){
+                event.stopPropagation();
+                console.log("Li was clicked.");
+            });
+        };
+    </script>
+</body>
+</html>
