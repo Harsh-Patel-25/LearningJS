@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios in js</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script>
+        let url = 'https://catfact.ninja/fact';
+        async function getFacts() {
+            try {
+                let res = await axios.get(url);
+                console.log(res);
+            }
+            catch(err) {
+                console.log("error is -", err);
+            }
+            console.log("Thank you for using.");
+        }
+    </script>
+</body>
+</html>
